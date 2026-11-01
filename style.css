@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #3b82f6;     
+    --primary-hover: #2563eb;      
+    --bg-color: #f8fafc;           
+    --surface-color: #ffffff;      
+    --text-color: #334155;         
+    --border-color: #cbd5e1;       
+    --focus-ring: rgba(59, 130, 246, 0.3); 
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+    min-height: 100vh;         
+    padding: 20px;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 450px;          
+}
+
+fieldset {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05); /* Ombra morbida moderna */
+}
+
+legend {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;             
+    margin-top: 10px;
+}
+
+form br {
+    display: none; 
+}
+
+label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: -5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color var(--transition-speed), transform 0.1s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+p {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 20px;
+}
